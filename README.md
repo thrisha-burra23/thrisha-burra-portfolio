@@ -6,7 +6,7 @@ A modern and responsive personal portfolio built using **React**, **Tailwind CSS
 
 ## 🚀 Live Demo
 
-👉 [View Portfolio](#)
+👉 https://thrisha-burra-portfolio.vercel.app/
 *(Add your deployed link here after hosting)*
 
 ---
