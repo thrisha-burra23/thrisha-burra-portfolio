@@ -3,7 +3,7 @@ const ProjectCard = ({ project }) => {
     <div className="border border-gray-200 rounded-2xl p-5 hover:shadow-lg transition group">
       {/* Image placeholder */}
       {/* <div className="h-40 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl mb-4 group-hover:scale-105 transition" /> */}
-      <div className="h-40 rounded-xl overflow-hidden mb-4">
+      <div className="h-50 rounded-xl overflow-hidden mb-4">
         <img
           src={project.image}
           alt={project.title}

@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
+    image:"/ResiTrack.png",
     title: "ResiTrack(Ongoing)",
     description:
       "A scalable MERN-based complaint management system designed for apartment communities. Built secure authentication using JWT access and refresh tokens, implemented role-based access control, and developed RESTful APIs for complaint lifecycle management. Structured backend using MVC architecture with Zod validation and MongoDB integration.",
@@ -12,13 +13,15 @@ const projects = [
     featured: true,
   },
   {
+    image:"/CoPath.png",
     title: "CoPath",
     description: "A full-featured carpooling web application built with React and Appwrite, enabling users to find and share rides efficiently. Implemented authentication, role-based dashboards (User, Driver, Admin), and real-time data synchronization. Managed server state using React Query and enhanced user experience with responsive UI, validations, and dynamic updates.",
     tech: ["React","Appwrite","React Query"],
     github: "https://github.com/thrisha-burra23/CoPath",
-    live: "#",
+    live: "https://copath-one.vercel.app/",
   },
   {
+    image:"/simonssays.png",
     title: "Simon Say's Game",
     description: "A JavaScript-based interactive memory game where users repeat increasingly complex sequences. Implemented core game logic, state management, and event handling for user interactions. Designed a responsive UI with visual feedback and animations to enhance gameplay experience.",
     tech: ["HTML","CSS","JavaScript"],
@@ -26,14 +29,16 @@ const projects = [
     live: "https://thrisha-burra23.github.io/Simons-Challenge-game/",
   },
   {
+    image:"/portfolio.png",
     title: "Portfolio",
     description: "A static frontend project built using HTML and CSS to demonstrate layout design and styling skills. Focused on clean UI structure, responsive design principles, and effective use of CSS for building visually appealing web pages.",
     tech: ["React"],
     github: "https://github.com/thrisha-burra23/thrisha-burra-portfolio",
-    live: "#",
+    live: "https://thrisha-burra-portfolio.vercel.app/",
   },
    {
-    title: "FastTrack",
+    image:"/FetchFast.png",
+    title: "FetchFast",
     description: "A static frontend project built using HTML and CSS to demonstrate layout design and styling skills. Focused on clean UI structure, responsive design principles, and effective use of CSS for building visually appealing web pages.",
     tech: ["HTML","CSS"],
     github: "https://github.com/thrisha-burra23/FetchFastWebsite",
