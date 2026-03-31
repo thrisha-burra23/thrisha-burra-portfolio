@@ -9,6 +9,7 @@ const iconMap = {
   Git: <FaGitAlt />,
   Redis: <SiRedis />,
   Postman: <SiPostman />,
+  
 
 };
 

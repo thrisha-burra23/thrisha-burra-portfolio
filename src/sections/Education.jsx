@@ -19,7 +19,6 @@ const education = [
     year: "2019 ",
     cgpa: "10 GPA",
   },
-
 ];
 
 const Education = () => {
@@ -30,7 +29,7 @@ const Education = () => {
 
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-200 h-full" />
 
           {education.map((edu, index) => (
             <div
@@ -51,7 +50,15 @@ const Education = () => {
 
                 <p className="text-gray-400 text-sm mt-1">{edu.year}</p>
 
+                {edu.college ===
+                  "Kamala Institute of Technology and Science" && (
+                  <p className="text-gray-500 text-sm mt-2">
+                    <span className="text-gray-600">Relevant coursework:</span> Data Structures, Web Development
+                  </p>
+                )}
+
                 <p className="text-indigo-600 font-medium mt-2">{edu.cgpa}</p>
+                
               </motion.div>
             </div>
           ))}

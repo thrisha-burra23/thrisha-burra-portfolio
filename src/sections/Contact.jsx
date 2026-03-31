@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -12,13 +13,13 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_swhwb75", // 🔥 replace
-        "template_r3ivtau", // 🔥 replace
+        "service_swhwb75",
+        "template_r3ivtau",
         form.current,
-        "-KVsacV8taeiuTuO7", // 🔥 replace
+        "-KVsacV8taeiuTuO7",
       )
       .then(() => {
-        alert("Message sent successfully!");
+        setSuccess(true);
         form.current.reset();
       })
       .catch((error) => {
@@ -41,8 +42,8 @@ const Contact = () => {
             <h3 className="text-xl font-semibold mb-4">Let's Connect 👋</h3>
 
             <p className="text-gray-600 mb-6">
-              I'm open to opportunities, collaborations, and discussions. Feel
-              free to reach out!
+              Open to full-stack developer roles, internships, and
+              collaborations. Feel free to reach out — I’d love to connect!
             </p>
 
             {/* Social Links */}
@@ -50,6 +51,7 @@ const Contact = () => {
               <a
                 href="https://github.com/thrisha-burra23"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 border rounded-xl hover:bg-gray-100"
               >
                 <FaGithub />
@@ -58,6 +60,7 @@ const Contact = () => {
               <a
                 href="https://www.linkedin.com/in/thrisha-burra/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 border rounded-xl hover:bg-gray-100"
               >
                 <FaLinkedin />
@@ -66,43 +69,44 @@ const Contact = () => {
           </div>
 
           {/* RIGHT SIDE (FORM) */}
-           <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="flex flex-col gap-4"
-        >
-          <input
-            type="text"
-            name="user_name"
-            placeholder="Your Name"
-            className="p-3 border rounded-lg"
-            required
-          />
+          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              className="p-3 border rounded-lg"
+              required
+            />
 
-          <input
-            type="email"
-            name="user_email"
-            placeholder="Your Email"
-            className="p-3 border rounded-lg"
-            required
-          />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Your Email"
+              className="p-3 border rounded-lg"
+              required
+            />
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="4"
-            className="p-3 border rounded-lg"
-            required
-          />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              className="p-3 border rounded-lg"
+              required
+            />
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 disabled:opacity-50"
-          >
-            {loading ? "Sending..." : "Send Message"}
-          </button>
-        </form>
+            {success && (
+              <p className="text-green-600 text-sm mt-2">
+                Message sent successfully!
+              </p>
+            )}
+            <button
+              type="submit"
+              disabled={loading}
+              className="bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 disabled:opacity-50"
+            >
+              {loading ? "Sending..." : "Send Message"}
+            </button>
+          </form>
         </div>
       </div>
     </section>

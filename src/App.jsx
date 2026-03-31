@@ -12,10 +12,13 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Projects/>
-      <Experience/>
-      <Education/>
-      <Contact/>
+      <Projects />
+      <Experience />
+      <Education />
+      <Contact />
+      <footer className="py-6 text-center text-gray-500 text-sm">
+        © {new Date().getFullYear()} Thrisha Burra. All rights reserved.
+      </footer>
     </div>
   );
 }

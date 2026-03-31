@@ -26,10 +26,20 @@ const ProjectCard = ({ project }) => {
 
       {/* Links */}
       <div className="flex gap-4 mt-4">
-        <a href={project.github} className="text-indigo-600 text-sm ">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-600 text-sm hover:underline"
+        >
           GitHub
         </a>
-        <a href={project.live} className="text-indigo-600 text-sm">
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-indigo-600 text-sm hover:underline"
+        >
           Live
         </a>
       </div>

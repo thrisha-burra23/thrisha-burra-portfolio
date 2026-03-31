@@ -1,14 +1,17 @@
 const experiences = [
   {
     role: "MERN Stack Trainee",
-    company: "Your Company Name",
-    duration: "2024 – Present",
+    company: "Student Tribe",
+    duration: "June 2025 – Feb 2026",
     points: [
-      "Built REST APIs using Node.js and Express",
-      "Implemented JWT-based authentication system",
-      "Worked with MongoDB for data modeling",
-      "Integrated Socket.IO for real-time features",
-      "Used Redis for caching and performance optimization",
+      "Designed and developed RESTful APIs using Node.js and Express for user authentication and complaint management systems",
+      "Implemented secure JWT authentication with access and refresh token strategy",
+      "Built role-based access control (RBAC) for multiple user roles (Resident, Admin, Staff)",
+      "Structured backend using MVC architecture with middleware for validation and authentication",
+      "Integrated MongoDB for data modeling and efficient query handling",
+      "Used Zod for request validation and error handling",
+      // "Worked with Redis for caching and improving API performance",
+      // "Implemented real-time features using Socket.IO for live updates",
     ],
   },
 ];
@@ -41,6 +44,23 @@ const Experience = () => {
                     <li key={i}>{point}</li>
                   ))}
                 </ul>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {[
+                    "Node.js",
+                    "Express",
+                    "MongoDB",
+                    "JWT",
+                    // "Redis",
+                    // "Socket.IO",
+                  ].map((t, i) => (
+                    <span
+                      key={i}
+                      className="text-xs bg-gray-100 px-2 py-1 rounded"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
